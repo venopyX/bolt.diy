@@ -1,24 +1,11 @@
-backend:
-    functions:
-        - entry: app.py
-          handler: handler
-          name: function-other
-          path: .
-          type: ""
-    language:
-        name: python
-        packageManager: pip
-    path: ""
 frontend:
-    environment:
-        VITE_API_URL_SERVERLESS: ${{ backend.functions.serverless.url }}
     path: .
-    publish: dist
+    publish: public
     scripts:
         build:
-            - pnpm run build
+            - pnpm run dev --host
         deploy:
-            - pnpm install
+            - npm install -g pnpm && pnpm install
     subdomain: hahahahuhuhu
 name: hahahahuhuhu
 region: us-east-1
