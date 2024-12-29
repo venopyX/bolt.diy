@@ -1,0 +1,25 @@
+backend:
+    functions:
+        - entry: app.py
+          handler: handler
+          name: function-other
+          path: .
+          type: ""
+    language:
+        name: python
+        packageManager: pip
+    path: ""
+frontend:
+    environment:
+        VITE_API_URL_SERVERLESS: ${{ backend.functions.serverless.url }}
+    path: .
+    publish: dist
+    scripts:
+        build:
+            - pnpm run build
+        deploy:
+            - pnpm install
+    subdomain: hahahahuhuhu
+name: hahahahuhuhu
+region: us-east-1
+yamlVersion: 2
