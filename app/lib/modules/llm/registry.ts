@@ -1,5 +1,6 @@
 import AnthropicProvider from './providers/anthropic';
 import CohereProvider from './providers/cohere';
+import CloudflareProvider from './providers/cloudflare';
 import DeepseekProvider from './providers/deepseek';
 import GoogleProvider from './providers/google';
 import GroqProvider from './providers/groq';
@@ -17,7 +18,9 @@ import HyperbolicProvider from './providers/hyperbolic';
 import AmazonBedrockProvider from './providers/amazon-bedrock';
 
 export {
+  AmazonBedrockProvider,
   AnthropicProvider,
+  CloudflareProvider,
   CohereProvider,
   DeepseekProvider,
   GoogleProvider,
@@ -33,5 +36,4 @@ export {
   XAIProvider,
   TogetherProvider,
   LMStudioProvider,
-  AmazonBedrockProvider,
 };
